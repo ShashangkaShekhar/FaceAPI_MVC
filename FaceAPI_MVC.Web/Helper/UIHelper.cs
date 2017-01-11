@@ -31,16 +31,9 @@ namespace FaceAPI_MVC.Web.Helper
 
             int uiWidth = 0;
             int uiHeight = 0;
-            if (ratio > 1.0)
-            {
-                uiWidth = maxSize;
-                uiHeight = (int)(maxSize / ratio);
-            }
-            else
-            {
-                uiWidth = (int)(uiHeight * ratio);
-                uiHeight = maxSize;
-            }
+            
+            uiWidth = maxSize;
+            uiHeight = (int)(maxSize / ratio);
 
             float scale = (float)uiWidth / imageWidth;
 
